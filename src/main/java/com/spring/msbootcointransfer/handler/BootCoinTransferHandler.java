@@ -53,8 +53,10 @@ public class BootCoinTransferHandler {
 										bootcointTransfer.setSeller(sellerMonedero);
 										bootcointTransfer.setBuyer(buyer);
 										switch(bootcointTransfer.getTypePaid()) {
-											case YANKI: template.send("topico-everis8", bootcointTransfer); break;
-											case TRANSFER: template.send("topico-everis9", bootcointTransfer); break;
+											case YANKI: System.err.println("YANKI topico-everis8");
+														template.send("topico-everis8", bootcointTransfer); break;
+											case TRANSFER: 	System.err.println("TRANSFER topico-everis9");
+															template.send("topico-everis9", bootcointTransfer); break;
 										}
 										template.send("topico-everis10", bootcointTransfer);
 										
